@@ -1,0 +1,16 @@
+<h1>Top10 World Best Food</h1>
+
+<% @foods.each do |food| %>
+<div class="food" id="food-<%= food.id %>">
+	<img src="<%= food.photo %>" alt="<%= food.name %>"/>
+	<p class="vote-info">
+		<span class="votes">
+			<%= food.votes %> 
+		</span>
+		
+		<a href="#" data-id="<%= food.id %>" class="food-vote">
+			<span class="glyphicon glyphicon-triangle-top" />
+		</a>		
+	</p>
+</div>
+<% end %>
